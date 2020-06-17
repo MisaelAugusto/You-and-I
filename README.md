@@ -21,7 +21,7 @@
   - Unity installed
   - SDK Android tools installed
 
-### How to edit the project in unity:
+### How to edit the project in unity (8 steps):
   1. Put your and your lover names in text 'You and I'
   2. Replace the 'Message' text with an affectionate introduction
   3. Set up time animations in script 'Loading.cs'
