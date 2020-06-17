@@ -21,10 +21,18 @@ public class Loading : MonoBehaviour
         TextMeshProUGUI message = GameObject.Find("Message").GetComponent<TextMeshProUGUI>();
         TextMeshProUGUI youAndI = GameObject.Find("You and I").GetComponent<TextMeshProUGUI>();
 
+        /* Here you set the three time animations to each opening text
+         * Each number in each array represents the delay to start an animation
+         * First: delay to start RevealText() -> Typewriter effect
+         * Second: delay to start ShakeText() -> Jitter text effect
+         * thrird: delay to start FadeOutText() -> Fade out effect
+         */
         this.ShowText(youAndI, new float[3] {0.0f, 3.0f, 6.0f});
         this.ShowText(hundred, new float[3] {7.5f, 11.5f, 14.5f});
         this.ShowText(reasons, new float[3] {7.5f, 11.5f, 14.5f});
         this.ShowText(message, new float[3] {16.0f, 32.5f, 36.0f});
+
+        // You don't need to change this
         this.ShowText(skip.GetComponentInChildren<TextMeshProUGUI>(), new float[3] {0.0f, 1.0f, 36.0f});
 
         StartCoroutine(this.SetSkip(skip));
